@@ -1,0 +1,15 @@
+// tsconfig.server.json
+{
+  "include": ["server/**/*", "shared/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"],
+  "compilerOptions": {
+    "outDir": "./dist",            // 🎯 REQUIRED: Set output directory for server JS
+    "module": "CommonJS",          // Use CommonJS for Node.js compatibility
+    "target": "ES2020",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "baseUrl": "."
+  }
+}
