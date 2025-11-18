@@ -1,0 +1,16 @@
+{
+  "name": "Multi-Tool Suite",
+  "short_name": "Multi-Tool",
+  "description": "All-in-one utility toolkit for your daily tasks",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
