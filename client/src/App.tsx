@@ -14,6 +14,8 @@ import AudioEditor from "@/pages/audio-editor";
 import PhotoEditor from "@/pages/photo-editor";
 import Preview from "@/pages/preview";
 import NotFound from "@/pages/not-found";
+import TextToBinary from "@/pages/text-to-binary";
+import BinaryToText from "@/pages/binary-to-text";
 
 function Router() {
   return (
@@ -28,6 +30,8 @@ function Router() {
       <Route path="/audio-editor" component={AudioEditor} />
       <Route path="/photo-editor" component={PhotoEditor} />
       <Route path="/preview" component={Preview} />
+      <Route path="/text-to-binary" component={TextToBinary} />
+      <Route path="/binary-to-text" component={BinaryToText} />
       <Route component={NotFound} />
     </Switch>
   );

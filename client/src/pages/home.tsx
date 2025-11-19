@@ -10,6 +10,7 @@ import {
   AudioLines,
   Image as ImageIcon,
   FileCode,
+  Binary,
 } from "lucide-react";
 
 interface Tool {
@@ -83,6 +84,20 @@ const tools: Tool[] = [
     icon: FileCode,
     path: "/preview",
     color: "text-teal-600",
+  },
+  {
+    name: "Text to Binary",
+    description: "Convert text to binary representation",
+    icon: Binary,
+    path: "/text-to-binary",
+    color: "text-blue-600",
+  },
+  {
+    name: "Binary to Text",
+    description: "Convert binary to text representation",
+    icon: Binary,
+    path: "/binary-to-text",
+    color: "text-green-600",
   },
 ];
 
