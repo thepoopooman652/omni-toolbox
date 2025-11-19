@@ -99,6 +99,20 @@ const tools: Tool[] = [
     path: "/binary-to-text",
     color: "text-green-600",
   },
+  {
+    name: "Text to Hex",
+    description: "Convert text to hexadecimal representation",
+    icon: Binary,
+    path: "/text-to-hex",
+    color: "text-yellow-600",
+  },
+  {
+    name: "Hex to Text",
+    description: "Convert hexadecimal to text representation",
+    icon: Binary,
+    path: "/hex-to-text",
+    color: "text-red-600",
+  },
 ];
 
 export default function Home() {

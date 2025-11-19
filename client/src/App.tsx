@@ -16,6 +16,8 @@ import Preview from "@/pages/preview";
 import NotFound from "@/pages/not-found";
 import TextToBinary from "@/pages/text-to-binary";
 import BinaryToText from "@/pages/binary-to-text";
+import TextToHex from "@/pages/text-to-hex";
+import HexToText from "@/pages/hex-to-text";
 
 function Router() {
   return (
@@ -32,6 +34,8 @@ function Router() {
       <Route path="/preview" component={Preview} />
       <Route path="/text-to-binary" component={TextToBinary} />
       <Route path="/binary-to-text" component={BinaryToText} />
+      <Route path="/text-to-hex" component={TextToHex} />
+      <Route path="/hex-to-text" component={HexToText} />
       <Route component={NotFound} />
     </Switch>
   );

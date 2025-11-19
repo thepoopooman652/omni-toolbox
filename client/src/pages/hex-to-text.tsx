@@ -3,35 +3,35 @@ import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowLeft, Binary, Copy, Check } from "lucide-react";
+import { ArrowLeft, Copy, Check } from "lucide-react";
 
-export default function BinaryToText() {
-  const [binary, setBinary] = useState("");
+export default function HexToText() {
+  const [hex, setHex] = useState("");
   const [text, setText] = useState("");
   const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
 
   const handleConvert = () => {
     setError("");
-    const binaryChunks = binary.split(" ");
+    const hexChunks = hex.split(" ");
     try {
-      const textResult = binaryChunks
+      const textResult = hexChunks
         .map((chunk) => {
-          if (!/^[01]{1,8}$/.test(chunk)) {
-            throw new Error("Invalid binary string");
+          if (!/^[0-9a-fA-F]{1,2}$/.test(chunk)) {
+            throw new Error("Invalid hexadecimal string");
           }
-          return String.fromCharCode(parseInt(chunk, 2));
+          return String.fromCharCode(parseInt(chunk, 16));
         })
         .join("");
       setText(textResult);
     } catch (e) {
-      setError("Invalid binary input. Please use space-separated 8-bit binary values.");
+      setError("Invalid hexadecimal input. Please use space-separated 2-digit hex values.");
       setText("");
     }
   };
 
   const handleClear = () => {
-    setBinary("");
+    setHex("");
     setText("");
     setError("");
     setCopied(false);
@@ -56,15 +56,15 @@ export default function BinaryToText() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Binary className="h-6 w-6 text-green-600" />
-              Binary to Text Converter
+              <span className="h-6 w-6 text-yellow-600">#</span>
+              Hexadecimal to Text Converter
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <Textarea
-              placeholder="Enter binary to convert..."
-              value={binary}
-              onChange={(e) => setBinary(e.target.value)}
+              placeholder="Enter hexadecimal to convert..."
+              value={hex}
+              onChange={(e) => setHex(e.target.value)}
               className="h-32"
             />
             {error && <p className="text-red-500 text-sm">{error}</p>}

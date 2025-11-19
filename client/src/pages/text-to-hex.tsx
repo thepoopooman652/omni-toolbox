@@ -3,42 +3,32 @@ import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowLeft, Binary, Copy, Check } from "lucide-react";
+import { ArrowLeft, Copy, Check } from "lucide-react";
 
-export default function BinaryToText() {
-  const [binary, setBinary] = useState("");
+export default function TextToHex() {
   const [text, setText] = useState("");
-  const [error, setError] = useState("");
+  const [hex, setHex] = useState("");
   const [copied, setCopied] = useState(false);
 
   const handleConvert = () => {
-    setError("");
-    const binaryChunks = binary.split(" ");
-    try {
-      const textResult = binaryChunks
-        .map((chunk) => {
-          if (!/^[01]{1,8}$/.test(chunk)) {
-            throw new Error("Invalid binary string");
-          }
-          return String.fromCharCode(parseInt(chunk, 2));
-        })
-        .join("");
-      setText(textResult);
-    } catch (e) {
-      setError("Invalid binary input. Please use space-separated 8-bit binary values.");
-      setText("");
-    }
+    const hexResult = text
+      .split("")
+      .map((char) => {
+        const hexChar = char.charCodeAt(0).toString(16);
+        return hexChar.length === 1 ? "0" + hexChar : hexChar;
+      })
+      .join(" ");
+    setHex(hexResult);
   };
 
   const handleClear = () => {
-    setBinary("");
     setText("");
-    setError("");
+    setHex("");
     setCopied(false);
   };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(text);
+    navigator.clipboard.writeText(hex);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -56,18 +46,17 @@ export default function BinaryToText() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Binary className="h-6 w-6 text-green-600" />
-              Binary to Text Converter
+              <span className="h-6 w-6 text-yellow-600">#</span>
+              Text to Hexadecimal Converter
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <Textarea
-              placeholder="Enter binary to convert..."
-              value={binary}
-              onChange={(e) => setBinary(e.target.value)}
+              placeholder="Enter text to convert..."
+              value={text}
+              onChange={(e) => setText(e.target.value)}
               className="h-32"
             />
-            {error && <p className="text-red-500 text-sm">{error}</p>}
             <div className="flex gap-2">
               <Button onClick={handleConvert} className="w-full">
                 Convert
@@ -82,12 +71,12 @@ export default function BinaryToText() {
             </div>
             <div className="relative">
               <Textarea
-                placeholder="Text output..."
-                value={text}
+                placeholder="Hexadecimal output..."
+                value={hex}
                 readOnly
                 className="h-32 pr-12"
               />
-              {text && (
+              {hex && (
                 <Button
                   variant="ghost"
                   size="icon"

@@ -3,11 +3,12 @@ import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowLeft, Binary } from "lucide-react";
+import { ArrowLeft, Binary, Copy, Check } from "lucide-react";
 
 export default function TextToBinary() {
   const [text, setText] = useState("");
   const [binary, setBinary] = useState("");
+  const [copied, setCopied] = useState(false);
 
   const handleConvert = () => {
     const binaryResult = text
@@ -23,6 +24,13 @@ export default function TextToBinary() {
   const handleClear = () => {
     setText("");
     setBinary("");
+    setCopied(false);
+  };
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(binary);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
@@ -61,12 +69,28 @@ export default function TextToBinary() {
                 Clear
               </Button>
             </div>
-            <Textarea
-              placeholder="Binary output..."
-              value={binary}
-              readOnly
-              className="h-32"
-            />
+            <div className="relative">
+              <Textarea
+                placeholder="Binary output..."
+                value={binary}
+                readOnly
+                className="h-32 pr-12"
+              />
+              {binary && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="absolute top-2 right-2"
+                  onClick={handleCopy}
+                >
+                  {copied ? (
+                    <Check className="h-5 w-5 text-green-500" />
+                  ) : (
+                    <Copy className="h-5 w-5" />
+                  )}
+                </Button>
+              )}
+            </div>
           </CardContent>
         </Card>
       </div>
