@@ -113,6 +113,13 @@ const tools: Tool[] = [
     path: "/hex-to-text",
     color: "text-red-600",
   },
+  {
+    name: "Math Solver",
+    description: "Solve math problems from an image",
+    icon: Calculator,
+    path: "/math-solver",
+    color: "text-yellow-600",
+  },
 ];
 
 export default function Home() {
