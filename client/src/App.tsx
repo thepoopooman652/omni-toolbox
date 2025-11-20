@@ -18,6 +18,7 @@ import TextToBinary from "@/pages/text-to-binary";
 import BinaryToText from "@/pages/binary-to-text";
 import TextToHex from "@/pages/text-to-hex";
 import HexToText from "@/pages/hex-to-text";
+import MathSolver from "@/pages/math-solver";
 
 function Router() {
   return (
@@ -36,6 +37,7 @@ function Router() {
       <Route path="/binary-to-text" component={BinaryToText} />
       <Route path="/text-to-hex" component={TextToHex} />
       <Route path="/hex-to-text" component={HexToText} />
+      <Route path="/math-solver" component={MathSolver} />
       <Route component={NotFound} />
     </Switch>
   );
