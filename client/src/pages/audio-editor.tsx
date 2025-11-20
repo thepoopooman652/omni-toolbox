@@ -1,3 +1,12 @@
+//=============================================
+//
+//               Audio Editor Page
+//         Copyright 2025 ProishTheIdiot
+//
+//         Created on: November 18, 2025   
+//               by ProishTheIdiot   
+//
+//=============================================
 import { useState, useRef, useEffect } from "react";
 import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";

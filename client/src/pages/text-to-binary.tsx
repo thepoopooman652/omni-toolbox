@@ -1,3 +1,11 @@
+//=============================================
+//
+//           Text to Binary Converter
+//         Copyright 2025 ProishTheIdiot
+//
+//         Created on: November 18, 2025      
+//
+//=============================================
 import { useState } from "react";
 import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
