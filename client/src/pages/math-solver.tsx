@@ -16,7 +16,6 @@ import { ArrowLeft, Upload, BrainCircuit, Camera } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import Tesseract from "tesseract.js";
 
-// Reminder to user: npm install tesseract.js - DONE
 
 function CameraView({ onCapture, onClose }: { onCapture: (image: string) => void, onClose: () => void }) {
   const videoRef = useRef<HTMLVideoElement>(null);
