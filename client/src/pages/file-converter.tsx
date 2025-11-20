@@ -1,11 +1,11 @@
 //=============================================
-//
-//              File Converter Page
-//         Copyright 2025 ProishTheIdiot
-//
-//         Created on: November 18, 2025      
-//               by ProishTheIdiot
-//
+//=                                           =
+//=             File Converter Page           =
+//=        Copyright 2025 ProishTheIdiot      =  
+//=                                           =
+//=        Created on: November 18, 2025      =
+//=              by ProishTheIdiot            =
+//=                                           =
 //=============================================
 import { useState, useRef } from "react";
 import { Link } from "wouter";
