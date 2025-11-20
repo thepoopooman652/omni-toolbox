@@ -1,11 +1,11 @@
 //==============================================
-//
-//               Audio Editor Page
-//         Copyright 2025 ProishTheIdiot
-//
-//         Created on: November 18, 2025      
-//               by ProishTheIdiot
-//
+//=                                            =
+//=              Audio Editor Page             =
+//=        Copyright 2025 ProishTheIdiot       =
+//=                                            =
+//=        Created on: November 18, 2025       =
+//=              by ProishTheIdiot             =
+//=                                            =
 //==============================================
 import { useState, useRef } from "react";
 import { Link } from "wouter";
