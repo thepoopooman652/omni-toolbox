@@ -1,11 +1,11 @@
 //==============================================
-//
-//               Math Solver Page
-//         Copyright 2025 ProishTheIdiot
-//
-//         Created on: November 20, 2025   
-//               by ProishTheIdiot   
-//
+//=                                            =
+//=              Math Solver Page              =
+//=        Copyright 2025 ProishTheIdiot       =
+//=                                            =
+//=        Created on: November 20, 2025       =
+//=              by ProishTheIdiot             =
+//=                                            =
 //==============================================
 import { useState, useRef, useEffect } from "react";
 import { Link } from "wouter";

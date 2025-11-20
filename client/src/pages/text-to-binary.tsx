@@ -1,10 +1,11 @@
 //=============================================
-//
-//           Text to Binary Converter
-//         Copyright 2025 ProishTheIdiot
-//
-//         Created on: November 18, 2025      
-//
+//=                                           =
+//=          Text to Binary Converter         =
+//=        Copyright 2025 ProishTheIdiot      =
+//=                                           =
+//=        Created on: November 18, 2025      =
+//=              by ProishTheIdiot            =
+//=                                           =
 //=============================================
 import { useState } from "react";
 import { Link } from "wouter";

@@ -1,11 +1,11 @@
 //=============================================
-//
-//              Unit Converter Page
-//         Copyright 2025 ProishTheIdiot
-//
-//         Created on: November 18, 2025      
-//               by ProishTheIdiot
-//
+//=                                           =
+//=             Unit Converter Page           =
+//=        Copyright 2025 ProishTheIdiot      =
+//=                                           =
+//=        Created on: November 18, 2025      =
+//=              by ProishTheIdiot            =
+//=                                           =
 //=============================================
 import { useState } from "react";
 import { Link } from "wouter";
