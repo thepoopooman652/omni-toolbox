@@ -1,6 +1,6 @@
 //==============================================
 //=                                            =
-//=              Audio Editor Page             =
+//=             Audio Recorder Page            =
 //=        Copyright 2025 ProishTheIdiot       =
 //=                                            =
 //=        Created on: November 18, 2025       =
