@@ -101,7 +101,6 @@ The application provides nine distinct tools, each operating primarily in the br
 - Current architecture uses in-memory storage; database integration is prepared but not required for existing features
 
 **Development Tools:**
-- `@replit/vite-plugin-*` - Replit-specific development enhancements
 - `tsx` - TypeScript execution for development server
 - `esbuild` - Production server bundling
 
